@@ -1,0 +1,2 @@
+TODO: add a directive which displays a single product!
+(Oh and remove this file as well).
