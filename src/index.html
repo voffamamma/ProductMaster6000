@@ -1,26 +1,62 @@
 <!DOCTYPE html>
 <html ng-app="project3App">
-<head>
-	<title>WEPO Assignment 3 - Online Web Store</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta charset="utf-8">
-	<link rel="stylesheet" href="styles/vendor.css">
-	<link rel="stylesheet" href="styles/app.css">
-</head>
+	<head>
+		<title>WEPO Assignment 3!!! - Online Web Store</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta charset="utf-8">
 
-	<main class="container-fluid">
-		<div class="Main clearfix" ng-view id="content"></div>
-	</main>
+		<!--KEEP THIS ONE -->
+		<link rel="stylesheet" href="src/vendor/bootstrap/dist/css/bootstrap.min.css" type="text/css">
+		<link rel="stylesheet" href="src/vendor/angular-toastr/dist/angular-toastr.min.css" type="text/css">
+		<link rel="stylesheet" href="styles/app.css">
+	</head>
+	<body class="General" >
+		<nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+			<div class="container" ng-controller="LanguageController">
+				<div title="Home" class="navbar-header">
+					<button type="button" class="navbar-toggle" ng-click="navbarCollapsed = !navbarCollapsed">
+			            <span class="sr-only">Toggle Language</span>
+			            <span class="icon-bar"></span>
+			            <span class="icon-bar"></span>
+			            <span class="icon-bar"></span>
+			        </button>
+					<div class="navbar-brand">
+						<a ng-href="#/">
+							<img alt="logo" class="img-circle" src="src/components/imgs/shell_sark.png"/>SellSharks
+						</a>
+					</div>
+				</div>
+				<div class="collapse navbar-collapse" uib-collapse="navbarCollapsed">
+					<ul class="nav navbar-nav navbar-right">
+						<li>
+							<a role="button" ng-click="changeLanguage('is')">
+								<img  title="Íslensku" alt="Íslensku"src="http://lipis.github.io/flag-icon-css/flags/4x3/is.svg" height="20"/>
+							</a>
+						</li>
+						<li>
+							<a role="button" ng-click="changeLanguage('en')">
+								<img title="English" alt="English" src="http://lipis.github.io/flag-icon-css/flags/4x3/gb.svg" height="20"/>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<main class="container">
+			<div class="clearfix" ng-view id="content"></div>
+		</main>
+		<toaster-container></toaster-container>
+		<hr>
+		<footer class="container footer">
+			<small>Created by: <a> hahahahaha</a></small>
+		</footer>
+		<!-- inject:vendor:js -->
+		<!-- endinject -->
 
-	<toaster-container></toaster-container>
-	<!-- inject:vendor:js -->
-	<!-- endinject -->
+		<!-- inject:app:js -->
+		<!-- endinject -->
 
-	<!-- inject:app:js -->
-	<!-- endinject -->
-
-	<!-- inject:templates:js -->
-	<!-- endinject -->
-</body>
-
+		<!-- inject:templates:js -->
+		<!-- endinject -->
+	</body>
 </html>
