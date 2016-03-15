@@ -24,13 +24,13 @@
 				<div class="collapse navbar-collapse" uib-collapse="navbarCollapsed">
 					<ul class="nav navbar-nav navbar-right">
 						<li>
-							<a role="button" ng-click="changeLanguage('is')">
-								<img  title="Íslensku" alt="Íslensku"src="http://lipis.github.io/flag-icon-css/flags/4x3/is.svg" height="20"/>
+							<a role="button" ng-click="changeLanguage('is')">Íslenska
+								<!--<img  title="Íslensku" alt="Íslensku"src="http://lipis.github.io/flag-icon-css/flags/4x3/is.svg" height="20"/>-->
 							</a>
 						</li>
 						<li>
-							<a role="button" ng-click="changeLanguage('en')">
-								<img title="English" alt="English" src="http://lipis.github.io/flag-icon-css/flags/4x3/gb.svg" height="20"/>
+							<a role="button" ng-click="changeLanguage('en')">English
+								<!--<img title="English" alt="English" src="http://lipis.github.io/flag-icon-css/flags/4x3/gb.svg" height="20"/>-->
 							</a>
 						</li>
 					</ul>
@@ -40,11 +40,13 @@
 		<main class="container">
 			<div class="clearfix" ng-view id="content"></div>
 		</main>
-		<toaster-container></toaster-container>
 		<hr>
 		<footer class="container footer">
 			<small>Vefforritun II - Skilaverkefni 3 - Gunnar Páll Viðarsson og Stefán þór Halldórsson</small>
 		</footer>
+
+		<toaster-container></toaster-container>
+
 		<!-- inject:vendor:js -->
 		<!-- endinject -->
 
