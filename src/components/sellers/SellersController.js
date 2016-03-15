@@ -3,7 +3,7 @@
 angular.module("project3App").controller("SellersController", ["$scope", "AppResource", "SellerDlg",
 function SellersController($scope, AppResource, SellerDlg, centrisNotify) 
 {
-	console.log("bla");
+
 	// TODO: load data from AppResource! Also, add other methods, such as to
 	// add/update sellers etc.
 
@@ -23,7 +23,7 @@ function SellersController($scope, AppResource, SellerDlg, centrisNotify)
 			{
 				console.log("Sko");
 				var newSeller = seller;
-				$scope.sellers.push(newSeller);
+				
 			}).error(function() 
 			{
 			//	centrisNotify.error(sellers.Message.SaveFailed);
