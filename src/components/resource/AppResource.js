@@ -114,6 +114,7 @@ function AppResource() {
 		addSeller: function addSeller(seller) {
 			if (mockResource.successAddSeller) {
 				// TODO : setja id
+				console.log("blabla" + " " + seller);
 				seller.id = nextID++;
 
 				mockSellers.push(seller);

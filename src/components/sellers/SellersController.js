@@ -14,48 +14,22 @@ function SellersController($scope, AppResource, SellerDlg, centrisNotify)
 
 	});
 
-	AppResource.addSeller(seller).success(function(seller)
-						{
-						var newSeller = seller;
-						$scope.sellers.push(newSeller);
-						}).error(function() 
-						{
-						//centrisNotify.error(sellers.Message.SaveFailed);
-						//TODO
-						});
 	
 	$scope.onAddSeller = function onAddSeller() 
 	{
 		SellerDlg.show().then(function(seller)
 		{
-			AppResource.getSellers().success(function(sellers)
+			AppResource.addSeller(seller).success(function(seller)
 			{
-				var seller_found = false;
-				for (var i = 0; i < sellers.length; i++) 
-				{
-					if(sellers[i].name === seller.name)
-					{
-						AppResource.updateSeller(sellers[i].id, seller).success(function(seller)
-						{
-					
-						});
-							seller_found = true;
-					}
-				}
-				if(seller_found === false)
-				{
-					 
-						AppResource.addSeller(seller).success(function(seller)
-						{
-							var newSeller = seller;
-							$scope.sellers.push(newSeller);
-						}).error(function() 
-						{
-						//	centrisNotify.error(sellers.Message.SaveFailed);
-						//TODO
-						});
-				}
+				console.log("Sko");
+				var newSeller = seller;
+				$scope.sellers.push(newSeller);
+			}).error(function() 
+			{
+			//	centrisNotify.error(sellers.Message.SaveFailed);
+			//TODO
 			});
+			
 		});	
 	}; 
 }]);
