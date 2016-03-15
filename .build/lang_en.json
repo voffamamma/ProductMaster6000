@@ -1,0 +1,11 @@
+{
+	"sellers": {
+		"Title": "Sellers List",
+		"Name": "Name",
+		"Messages": {
+			"LoadFailed": "Failed to load the list of sellers",
+			"SaveSucceeded": "The seller has been added successfully",
+			"SaveFailed": "Unfortunately we could not add a new seller"
+		}
+	}
+}
